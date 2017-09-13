@@ -23,6 +23,18 @@
   to { transform: rotate(360deg); }
 }
 
-.form {
-  background-color: #808080;
+
+#header1 {
+    background-color: #5768FA;
+    text-align: center;
+}
+
+#create {
+  text-align: center;
+  background-image: url(http://www.shawacademy.com/blog/wp-content/uploads/2015/07/waterfall-photography-tips-1000x605.jpg);
+}
+html,
+body {
+  min-height: 100%;
+  height: 100%;
 }

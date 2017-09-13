@@ -30,13 +30,20 @@ class Product extends Component {
  render() {
    return (
      <div>
-     <p> {this.props.name} = ${this.props.price}</p>
-     <button onClick={this.buy}>+</button>
-     <button onClick={this.show}>Show</button>
-     <button onClick={this.bawas}>-</button>
-     <h3>${this.state.qty*this.props.price}</h3>
-     <hr/>
-
+       <div className="container-fluid" id="header1">
+          <div class="row">
+          <div class="col-xs-8">
+          <div>
+          <p> {this.props.name} = ${this.props.price}</p>
+          <button onClick={this.buy}>+</button>
+          <button onClick={this.show}>Show</button>
+          <button onClick={this.bawas}>-</button>
+          <h3>${this.state.qty*this.props.price}</h3>
+          <hr/>
+          </div>
+          </div>
+        </div>
+      </div>
      </div>
    );
  }
@@ -72,7 +79,7 @@ class ProductForm extends Component {
 
  render() {
    return(
-   <form onSubmit={this.submit}>
+     <form onSubmit={this.submit}>
      <input type="text" placeholder="Prod Name" ref="name"/>
      <input type="text" placeholder="Prod Price" ref="price"/>
      <br/>
@@ -127,16 +134,14 @@ createProduct(product) {
    });
    return(
    <div>
-     <div className="col-md-4 col-lg-4">
+       <div>
      <ProductForm handleCreate={this.createProduct}/>
      {products}
      <Total total={this.state.total}/>
-     </div>
+      </div>
    </div>
    )
  }
 }
-
-
 
 export default ProductList;
