@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
 
@@ -32,19 +31,15 @@ class Product extends Component {
      <div>
        <div className="container-fluid" id="header1">
           <div class="row">
-          <div class="col-xs-8">
-          <div>
-          <p> {this.props.name} = ${this.props.price}</p>
-          <button onClick={this.buy}>+</button>
-          <button onClick={this.show}>Show</button>
-          <button onClick={this.bawas}>-</button>
-          <h3>${this.state.qty*this.props.price}</h3>
-          <hr/>
+                <p> {this.props.name} = ${this.props.price}</p>
+                <button onClick={this.buy}>+</button>
+                <button onClick={this.show}>Show</button>
+                <button onClick={this.bawas}>-</button>
+                <h3>${this.state.qty*this.props.price}</h3>
           </div>
-          </div>
+                <hr/>
         </div>
       </div>
-     </div>
    );
  }
 }
@@ -52,8 +47,10 @@ class Product extends Component {
 class Total extends Component {
  render() {
    return (
+     <div className="box" id="total1">
      <div>
        <h3>Total balance: ${this.props.total} </h3>
+     </div>
      </div>
      )
  }
@@ -84,33 +81,28 @@ class ProductForm extends Component {
      <input type="text" placeholder="Prod Price" ref="price"/>
      <br/>
      <button>Create Product</button>
-   </form>
+     </form>
    );
  }
 }
 
-
-
-
 class ProductList extends Component {
+  constructor(props) {
+  super(props);
+  this.state={total:0,
+      productList:
+  [{name: "Blue Skies Bouquet", price: 1000 , imgsrc:"http://www.tulip-info.com/images/tulp_soorten.jpg"},
+  {name: "Long-stemmed Red Roses", price: 1500},
+  {name: "Sugar and sweet", price: 600},
+  {name: "Rose n Lily", price: 795}]
+  };
+  this.calcTotal = this.calcTotal.bind(this);
+  this.createProduct = this.createProduct.bind(this);
+  }
 
-
-constructor(props) {
- super(props);
- this.state={total:0,
-     productList:
- [{name: "Apple", price: 210},
- {name: "iPhone 8", price: 500},
- {name: "LG", price: 600},
- {name: "Samsung", price: 250}]
- };
- this.calcTotal = this.calcTotal.bind(this);
- this.createProduct = this.createProduct.bind(this);
-}
-
-calcTotal(price) {
- this.setState({total: this.state.total + price})
-}
+  calcTotal(price) {
+  this.setState({total: this.state.total + price})
+  }
 
 
 showProduct(name){
@@ -134,10 +126,12 @@ createProduct(product) {
    });
    return(
    <div>
+     <div className="box" id="box1">
        <div>
      <ProductForm handleCreate={this.createProduct}/>
      {products}
      <Total total={this.state.total}/>
+     </div>
       </div>
    </div>
    )
