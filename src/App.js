@@ -47,7 +47,7 @@ class Product extends Component {
 class Total extends Component {
  render() {
    return (
-     <div className="box" id="total1">
+     <div className="container" id="total1">
      <div>
        <h3>Total balance: ${this.props.total} </h3>
      </div>
@@ -76,12 +76,15 @@ class ProductForm extends Component {
 
  render() {
    return(
+     <div className="container" id="top">
+       <h1> React Flower Shop </h1>
      <form onSubmit={this.submit}>
      <input type="text" placeholder="Prod Name" ref="name"/>
      <input type="text" placeholder="Prod Price" ref="price"/>
      <br/>
      <button>Create Product</button>
      </form>
+     </div>
    );
  }
 }
@@ -93,7 +96,13 @@ class ProductList extends Component {
       productList:
   [{name: "Roses with cacti", price: 50, image: require("./img/roseswithcac.jpg")},
   {name: "Multi Rose Silve Bouquet", price: 65, image: require("./img/multirosesilver.jpg")},
+  {name: "Long-stemmed Roses", price: 80, image: require("./img/roses.jpg")},
+  {name: "Sunset Rose", price: 90, image: require("./img/sunsetrose.jpg")},
   {name: "Hot Pink Mix", price: 40, image: require("./img/royalpurple.jpg")},
+  {name: "Plush Orchid", price: 120, image: require("./img/plushorchid.jpg")},
+  {name: "Royal Purple", price: 130, image: require("./img/royalpurple.jpg")},
+  {name: "Stargazer", price: 77, image: require("./img/stargazer.jpg")},
+  {name: "Orchids", price: 111, image: require("./img/orchids.jpg")},
   {name: "Tulips", price: 155, image: require("./img/tulip.jpg")}]
   };
   this.calcTotal = this.calcTotal.bind(this);

@@ -1,30 +1,26 @@
 #header1 {
-  background-color: #5768FA;
+  background-color: #8E9AF5;
   text-align: center;
 }
 
-#create {
+#box1 {
 text-align: center;
-background-image: url(http://www.shawacademy.com/blog/wp-content/uploads/2015/07/waterfall-photography-tips-1000x605.jpg);
-}
-html,
-body {
-min-height: 100%;
-height: 100%;
-}
-#box1{
-text-align: center;
-background-color: pink;
+background-color: #070101;
+font-size: 30px;
+font-family: 'Libre Franklin', sans-serif;
 }
 
-#total1{
-background-color: red;
+#total1 {
+background-color: #F7C2C2;
+font-size: 30px;
+font-family: 'Libre Franklin', sans-serif;
 }
 
-#productlist {
-background-color: yellow;
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: pink;
 }
- img {
+img {
    max-height: 300px;
    max-width: 300px;
  }
