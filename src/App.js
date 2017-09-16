@@ -91,10 +91,10 @@ class ProductList extends Component {
   super(props);
   this.state={total:0,
       productList:
-  [{name: "Blue Skies Bouquet", price: 1000 , imgsrc:"http://www.tulip-info.com/images/tulp_soorten.jpg"},
-  {name: "Long-stemmed Red Roses", price: 1500},
-  {name: "Sugar and sweet", price: 600},
-  {name: "Rose n Lily", price: 795}]
+  [{name: "Roses with cacti", price: 50, image: require("./img/roseswithcac.jpg")},
+  {name: "Multi Rose Silve Bouquet", price: 65, image: require("./img/multirosesilver.jpg")},
+  {name: "Hot Pink Mix", price: 40, image: require("./img/royalpurple.jpg")},
+  {name: "Tulips", price: 155, image: require("./img/tulip.jpg")}]
   };
   this.calcTotal = this.calcTotal.bind(this);
   this.createProduct = this.createProduct.bind(this);
@@ -119,9 +119,12 @@ createProduct(product) {
    var component = this;
    var products = this.state.productList.map(function(prod){
      return(
+       <div>
+         <img src={prod.image} className="image-box img-responsive"/>
        <Product name={prod.name} price={prod.price}
          handleShow={component.showProduct}
          handleTotal={component.calcTotal}/>
+       </div>
      );
    });
    return(
