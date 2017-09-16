@@ -10,3 +10,6 @@ This is the first page.
 
 This part shows what you can see once you would scroll down and the total as well. 
 ![alt-text](reactsecond.png)
+
+This last part shows the total amount that was purchased.
+![alt-text](reacttotal.png)
