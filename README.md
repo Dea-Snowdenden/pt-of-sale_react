@@ -5,6 +5,15 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 This is a basic app done in react to show the point of sale.
 
+```
+class Product extends Component { constructor(props) {   
+    super(props);   
+        this.state = {qty:0};   
+        this.buy = this.buy.bind(this);  
+        this.show =this.show.bind(this);   
+        this.minus =this.minus.bind(this); }
+```
+
 This is the first page.
 ![alt-text](reactflowershop.png)
 
