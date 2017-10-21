@@ -18,9 +18,14 @@ This is the first page.
 ![alt-text](reactflowershop.png)
 
 
-This part shows what you can see once you would scroll down and the total as well. 
+This part shows items plus total. 
 ![alt-text](reactsecond.png)
 
 
 This last part shows the total amount that was purchased.
 ![alt-text](reacttotal.png)
+
+## LINK
+
+http://dea-react-shoppingcart.herokuapp.com/
+
