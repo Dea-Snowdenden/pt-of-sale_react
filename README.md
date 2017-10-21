@@ -5,6 +5,13 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 This is a basic app done in react to show the point of sale.
 
+### FEATURES
+* add products to cart
+* total products
+* small description of each product
+
+### FOLDER STRUCTURE
+
 ```
 class Product extends Component { constructor(props) {   
     super(props);   
